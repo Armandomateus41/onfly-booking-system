@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TravelRequestController;
@@ -18,7 +17,6 @@ Route::post('/login', [AuthController::class, 'login']);
 
 // Rotas protegidas (JWT necessário)
 Route::middleware('auth:api')->group(function () {
-
     // Criar novo pedido
     Route::post('/travel-requests', [TravelRequestController::class, 'store']);
 
@@ -28,7 +26,7 @@ Route::middleware('auth:api')->group(function () {
     // Ver pedido por ID
     Route::get('/travel-requests/{id}', [TravelRequestController::class, 'show']);
 
-    // Atualizar status (somente outro usuário)
+    // Atualizar status (somente o dono)
     Route::patch('/travel-requests/{id}/status', [TravelRequestController::class, 'updateStatus']);
 
     // Cancelar pedido (se aprovado e for dono)

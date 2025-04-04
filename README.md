@@ -100,3 +100,64 @@ Os seeders criam:
 
 Este projeto foi desenvolvido por [Armando Mateus](https://github.com/Armandomateus41)  
 Repositório: [onfly-booking-system](https://github.com/Armandomateus41/onfly-booking-system)
+
+
+php artisan route:clear
+php artisan config:clear
+composer dump-autoload
+php artisan route:list
+
+exit
+docker-compose down
+docker-compose up -d --build
+docker exec -it laravel_app bash
+php artisan route:list
+docker exec -it laravel_app bash
+
+php artisan route:clear
+php artisan config:clear
+composer dump-autoload
+php artisan route:list
+
+docker-compose down -v
+docker system prune -af
+docker-compose up -d --build
+
+
+php artisan migrate:fresh --seed
+php artisan route:clear
+php artisan config:clear
+php artisan optimize:clear
+composer dump-autoload
+php artisan route:list
+
+php artisan test
+
+
+php artisan config:clear
+php artisan route:clear
+composer dump-autoload
+php artisan route:list
+
+
+
+php artisan config:clear
+php artisan route:clear
+composer dump-autoload
+php artisan route:list
+
+
+php artisan config:clear
+php artisan route:clear
+php artisan optimize:clear
+
+
+php artisan config:clear
+php artisan cache:clear
+
+
+apt-get update
+apt-get install net-tools
+php artisan serve --port=8002
+kill -9 93
+php artisan migrate

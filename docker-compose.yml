@@ -26,7 +26,7 @@ services:
     container_name: laravel_db
     restart: always
     ports:
-      - "3307:3306" # <<< aqui trocamos para evitar conflito
+      - "3307:3306" # <<< aqui trocamos para evitar conflito verfica
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: laravel
